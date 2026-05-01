@@ -1,0 +1,17 @@
+name: BalanceIndicator
+version: '1.0.0'
+main: dev.klonithorium.balanceindicator.BalanceIndicatorPlugin
+api-version: '1.21'
+author: klonithorium
+depend:
+  - Vault
+  - PlaceholderAPI
+commands:
+  balanceindicator:
+    description: Reload BalanceIndicator configuration.
+    usage: /balanceindicator reload
+    permission: balanceindicator.reload
+permissions:
+  balanceindicator.reload:
+    description: Allows reloading BalanceIndicator.
+    default: op
