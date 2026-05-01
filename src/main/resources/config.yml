@@ -1,0 +1,35 @@
+# Placeholder:
+#   %balance_indicator%
+#
+# The plugin compares the player's current Vault economy balance with the
+# last balance seen by this placeholder, then displays the difference.
+
+format:
+  # Available tokens:
+  #   {amount} - absolute balance change, for example 250
+  #   {sign}   - positive-sign, negative-sign, or zero-sign
+  positive: "{sign}{amount}"
+  negative: "{sign}{amount}"
+  zero: "0"
+
+  positive-sign: "+"
+  negative-sign: "-"
+  zero-sign: ""
+
+number:
+  decimals: 0
+  grouping: false
+  strip-trailing-zeros: true
+
+behavior:
+  # What to show the first time the placeholder is requested for a player.
+  # Options: zero, blank
+  first-check: zero
+
+  # If true, the first check stores the player's balance without displaying
+  # that full balance as an increase.
+  ignore-first-change: true
+
+messages:
+  reload: "&aBalanceIndicator config reloaded."
+  no-permission: "&cYou do not have permission to use this command."
